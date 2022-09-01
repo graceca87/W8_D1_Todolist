@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from 'react'
+import Nav from "./components/Nav";
+import ToDo from "./components/ToDo";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // enclose it in a fragment so you can pull multiple components"
+    <>
+      <Nav />
+      {/* container puts the whole body into a container */}
+      <div className='container'>
+      <ToDo />
+      </div>
+    </>
   );
 }
 
